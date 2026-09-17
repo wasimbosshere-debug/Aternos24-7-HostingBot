@@ -9,13 +9,13 @@ const http = require('http');
 const https = require('https');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 37644;
 
 let bot = null;
 let activeIntervals = [];
 let reconnectTimeoutId = null;
 let connectionTimeoutId = null;
-let isReconnecting = false;
+let isReconnecting = true;
 
 let botState = {
   connected: false,
